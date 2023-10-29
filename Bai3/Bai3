@@ -1,0 +1,72 @@
+1. [Thực hành] Tìm kiếm phần thử nâng cao
+Tìm kiếm phần tử Email theo các cách tìm kiếm XPath nâng cao tại (https://demoqa.com/text-box)
+
+・Tìm kiếm theo contains()
+//input[contains(@placeholder,'na')]
+
+・Tìm kiếm theo starts-with()
+//input[starts-with(@placeholder,'name')]
+
+・Tìm kiếm theo text()
+//label[text()='Email']
+
+・Tìm kiếm theo normalize-space()
+//label[normalize-space()='Email']
+
+・Tìm kiếm theo toán tử OR và AND
+//input[@placeholder="name@example.com" or @type="text"]
+//input[@placeholder="name@example.com" and @type=“email”]
+
+2. [Thực hành] Tìm kiếm phần tử nâng cao theo vị trí
+Tìm kiếm phần tử Email theo các cách tìm kiếm khác nhau tại (https://demoqa.com/text-box)
+
+・ancestor
+//input[@placeholder="name@example.com"]/ancestor::div[@id="userEmail-wrapper"]
+
+・descendant
+//div[@id="userEmail-wrapper"]/descendant::input[@placeholder="name@example.com"]
+
+・preceding
+//input[@placeholder="name@example.com"]/preceding::div[@id="Ad.Plus-728x90"]
+
+・following
+//div[@id="userEmail-wrapper"]/following::label[@id="currentAddress-label"]
+
+3. [Bài tập] Thực hành tìm kiếm locator nâng cao
+Thực hành tìm kiếm toàn bộ phần tử trong page (https://demoqa.com/text-box) với cách tìm kiếm theo XPath nâng cao
+・Tìm kiếm theo contains()
+//input[contains(@placeholder,'Full')]
+
+・Tìm kiếm theo starts-with()
+//input[starts-with(@placeholder,'name')]
+
+・Tìm kiếm theo text()
+//label[text()="Current Address"]
+
+・Tìm kiếm theo normalize-space()
+//label[normalize-space()="Permanent Address"]
+
+・Tìm kiếm theo toán tử OR và AND
+//textarea[@placeholder="Current Address" or @id="currentAddress"]
+//input[@placeholder="name@example.com" and @type=“email”]
+
+4. [Bài tập] Tìm kiếm phần tử nâng cao theo vị trí
+Thực hành tìm kiếm toàn bộ phần tử trong page (https://demoqa.com/text-box) với cách tìm kiếm theo vị trí & mối liên quan nâng cao
+
+・Tìm kiếm theo ancestor
+//input[@placeholder="Full Name"]/ancestor::div[@id="userName-wrapper"]
+
+・Tìm kiếm theo descendant
+//div[@class="col-md-9 col-sm-12"]/descendant::input[@placeholder="name@example.com"]
+
+・Tìm kiếm theo preceding
+//textarea[@placeholder="Current Address"]/preceding::div[@id="userEmail-wrapper"]
+
+・Tìm kiếm theo following
+//div[@id="currentAddress-wrapper"]/following::div[@id="permanentAddress-wrapper"]
+
+・Tìm kiếm theo preceding-sibling
+ //div[@id='permanentAddress-wrapper']//preceding-sibling::div[contains(@id,'userEmail-wrappe')]
+
+・Tìm kiếm theo following-sibling
+ //div[@id='userEmail-wrapper']//following-sibling::div[contains(@id,'currentAddress')]

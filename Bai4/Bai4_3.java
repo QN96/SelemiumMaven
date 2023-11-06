@@ -155,14 +155,15 @@ public class Bai4_3 {
         datePicker1.sendKeys(Keys.ENTER);
 
         // V. Gender
-        String DYNAMIC_INPUT_NAME_VALUE_FORM = "//label[type()='%s' and @value='%s']/following-sibling::label";
-        String maleXPath = String.format(DYNAMIC_INPUT_NAME_VALUE_FORM, "Radio","2");
+        Thread.sleep(20);
+        String DYNAMIC_INPUT_NAME_VALUE_FORM = "//input[@type='%s' and @value='%s']/following-sibling::span";
+        String maleXPath = String.format(DYNAMIC_INPUT_NAME_VALUE_FORM, "radio","2");
         Boolean isSelected = driver.findElement(By.xpath(maleXPath)).isSelected();
         if (isSelected == false) {
             driver.findElement(By.xpath(maleXPath)).click();
         }
 
-        driver.findElement(By.xpath("//button[@type=\"submit\"] [position() =1]")).click();
-        driver.findElement(By.xpath("//button[@type=\"submit\"]/following::button [@type=\"submit\"]")).click();
+        //driver.findElement(By.xpath("//button[@type=\"submit\"] [position() =1]")).click();
+        //driver.findElement(By.xpath("//button[@type=\"submit\"]/following::button [@type=\"submit\"]")).click();
     }
 }

@@ -427,6 +427,12 @@ public class luyentap1 {
         WebElement option3Element = driver.findElement(By.xpath(option3XPath));
         option3Element.click();
 
+        menuField.click();
+
+        String option7XPath = String.format(OPTION, "Language");
+        WebElement option7Element = driver.findElement(By.xpath(option7XPath));
+        option7Element.click();
+
         // 5. Disable keyboard shortcuts
 
         String KeyboardXPath = String.format(DROPDOWN, "Disable keyboard shortcuts");

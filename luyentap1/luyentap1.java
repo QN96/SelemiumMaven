@@ -363,116 +363,124 @@ public class luyentap1 {
         // IV. Chuyển tab "  My preferences"
         driver.findElement(By.xpath("//a[@data-bs-target=\"#tab-my-preferences\"]")).click();
 
-        // 1. Notification sound volume
-        driver.findElement(By.xpath("//span[@id='select2-chosen-2']")).click();
-        driver.findElement(By.xpath("//div[@id='select2-result-label-20']")).click();
+//        // 1. Notification sound volume
+//        driver.findElement(By.xpath("//span[@id='select2-chosen-2']")).click();
+//        driver.findElement(By.xpath("//div[@id='select2-result-label-20']")).click();
 
-        // Tối ưu
-        String DROPDOWN = "//label[text()='%s']/following::div[position()=2]";
+//        // Tối ưu
+//        String DROPDOWN = "//label[text()='%s']/following::div[position()=2]";
+//
+//        // 2. Enable web notification
+//
+//        String EnablewebXPath = String.format(DROPDOWN, "Enable web notification");
+//
+//        // Mở dropdown
+//        WebElement enablewebField = driver.findElement(By.xpath(EnablewebXPath));
+//        enablewebField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//        String OPTION = "//li[@role='presentation' and .='%s']";
+//
+//        String optionXPath = String.format(OPTION, "No");
+//        WebElement optionElement = driver.findElement(By.xpath(optionXPath));
+//        optionElement.click();
+//
+//        // 3. Enable email notification
+//
+//        String EnableEmailXPath = String.format(DROPDOWN, "Enable email notification");
+//
+//        // Mở dropdown
+//        WebElement enableemailField = driver.findElement(By.xpath(EnableEmailXPath));
+//        enableemailField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option1XPath = String.format(OPTION, "No");
+//        WebElement option1Element = driver.findElement(By.xpath(option1XPath));
+//        option1Element.click();
+//
+//        // 3. Language
+//
+//        String LanguageXPath = String.format(DROPDOWN, "Language");
+//
+//        // Mở dropdown
+//        WebElement LanguageField = driver.findElement(By.xpath(LanguageXPath));
+//        LanguageField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option2XPath = String.format(OPTION, "German");
+//        WebElement option2Element = driver.findElement(By.xpath(option2XPath));
+//        option2Element.click();
+//
+//        // 4. Hide menus from topbar
+//
+//        String MenuXPath = String.format(DROPDOWN, "Hide menus from topbar");
+//
+//        // Mở dropdown
+//        WebElement menuField = driver.findElement(By.xpath(MenuXPath));
+//        menuField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option3XPath = String.format(OPTION, "Dashboard customization");
+//        WebElement option3Element = driver.findElement(By.xpath(option3XPath));
+//        option3Element.click();
+//
+//        menuField.click();
+//
+//        String option7XPath = String.format(OPTION, "Language");
+//        WebElement option7Element = driver.findElement(By.xpath(option7XPath));
+//        option7Element.click();
+//
+//        // 5. Disable keyboard shortcuts
+//
+//        String KeyboardXPath = String.format(DROPDOWN, "Disable keyboard shortcuts");
+//
+//        // Mở dropdown
+//        WebElement KeyboardField = driver.findElement(By.xpath(KeyboardXPath));
+//        KeyboardField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option4XPath = String.format(OPTION, "Yes");
+//        WebElement option4Element = driver.findElement(By.xpath(option4XPath));
+//        option4Element.click();
+//
+//        // 6. Recently meaning
+//
+//        String RecentlyXPath = String.format(DROPDOWN, "Recently meaning");
+//
+//        // Mở dropdown
+//        WebElement RecentlyField = driver.findElement(By.xpath(RecentlyXPath));
+//        RecentlyField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option5XPath = String.format(OPTION, "In 8 hours");
+//        WebElement option5Element = driver.findElement(By.xpath(option5XPath));
+//        option5Element.click();
+//
+//        // 7. Snooze length
+//
+//        String SnoozeXPath = String.format(DROPDOWN, "Snooze length");
+//
+//        // Mở dropdown
+//        WebElement SnoozeField = driver.findElement(By.xpath(SnoozeXPath));
+//        SnoozeField.click();
+//
+//        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
+//
+//        String option6XPath = String.format(OPTION, "15 Minutes");
+//        WebElement option6Element = driver.findElement(By.xpath(option6XPath));
+//        option6Element.click();
 
-        // 2. Enable web notification
+        // 7. Mở popup
+        driver.findElement(By.xpath("//a[@data-post-user_id='1']")).click();
 
-        String EnablewebXPath = String.format(DROPDOWN, "Enable web notification");
+        // 8. Close popup
+        //driver.findElement(By.xpath("(//div[@class='modal-content']//following-sibling::button[@class='btn btn-default'])[position()=2]")).click();
+        driver.findElement(By.xpath("(//button[@class='btn-close'])[1]")).click();
 
-        // Mở dropdown
-        WebElement enablewebField = driver.findElement(By.xpath(EnablewebXPath));
-        enablewebField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-        String OPTION = "//li[@role='presentation' and .='%s']";
-
-        String optionXPath = String.format(OPTION, "No");
-        WebElement optionElement = driver.findElement(By.xpath(optionXPath));
-        optionElement.click();
-
-        // 3. Enable email notification
-
-        String EnableEmailXPath = String.format(DROPDOWN, "Enable email notification");
-
-        // Mở dropdown
-        WebElement enableemailField = driver.findElement(By.xpath(EnableEmailXPath));
-        enableemailField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option1XPath = String.format(OPTION, "No");
-        WebElement option1Element = driver.findElement(By.xpath(option1XPath));
-        option1Element.click();
-
-        // 3. Language
-
-        String LanguageXPath = String.format(DROPDOWN, "Language");
-
-        // Mở dropdown
-        WebElement LanguageField = driver.findElement(By.xpath(LanguageXPath));
-        LanguageField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option2XPath = String.format(OPTION, "German");
-        WebElement option2Element = driver.findElement(By.xpath(option2XPath));
-        option2Element.click();
-
-        // 4. Hide menus from topbar
-
-        String MenuXPath = String.format(DROPDOWN, "Hide menus from topbar");
-
-        // Mở dropdown
-        WebElement menuField = driver.findElement(By.xpath(MenuXPath));
-        menuField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option3XPath = String.format(OPTION, "Dashboard customization");
-        WebElement option3Element = driver.findElement(By.xpath(option3XPath));
-        option3Element.click();
-
-        menuField.click();
-
-        String option7XPath = String.format(OPTION, "Language");
-        WebElement option7Element = driver.findElement(By.xpath(option7XPath));
-        option7Element.click();
-
-        // 5. Disable keyboard shortcuts
-
-        String KeyboardXPath = String.format(DROPDOWN, "Disable keyboard shortcuts");
-
-        // Mở dropdown
-        WebElement KeyboardField = driver.findElement(By.xpath(KeyboardXPath));
-        KeyboardField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option4XPath = String.format(OPTION, "Yes");
-        WebElement option4Element = driver.findElement(By.xpath(option4XPath));
-        option4Element.click();
-
-        // 6. Recently meaning
-
-        String RecentlyXPath = String.format(DROPDOWN, "Recently meaning");
-
-        // Mở dropdown
-        WebElement RecentlyField = driver.findElement(By.xpath(RecentlyXPath));
-        RecentlyField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option5XPath = String.format(OPTION, "In 8 hours");
-        WebElement option5Element = driver.findElement(By.xpath(option5XPath));
-        option5Element.click();
-
-        // 7. Snooze length
-
-        String SnoozeXPath = String.format(DROPDOWN, "Snooze length");
-
-        // Mở dropdown
-        WebElement SnoozeField = driver.findElement(By.xpath(SnoozeXPath));
-        SnoozeField.click();
-
-        // Tìm và chọn tùy chọn trong dropdown bằng văn bản
-
-        String option6XPath = String.format(OPTION, "15 Minutes");
-        WebElement option6Element = driver.findElement(By.xpath(option6XPath));
-        option6Element.click();
     }
 }
